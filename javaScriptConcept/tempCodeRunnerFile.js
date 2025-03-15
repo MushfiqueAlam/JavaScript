@@ -1,1 +1,1 @@
-name:"Mushfique"
+full name
