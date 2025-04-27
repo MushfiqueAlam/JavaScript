@@ -64,3 +64,9 @@ const newFunction=(userName)=>{
 }
 
 console.log(newFunction("Mushfique")); // Mushfique
+
+const str="Mushfique";
+const strFunction=(str)=>{
+    return str; // Mushfique
+}
+console.log(strFunction("Mushfique")); // Mushfique
