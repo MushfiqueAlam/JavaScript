@@ -13,3 +13,13 @@ p{
     color: green;
     background-color: yellow; 
 }
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
