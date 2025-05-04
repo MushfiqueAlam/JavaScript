@@ -51,27 +51,49 @@
 // node.addEventListener(event,callback); --> callback is a function which is passed as a argument to another function
 
 
-
-let btn=document.querySelector("#btn")
-const clickevent=()=>{
-    console.log("Button clicked using event listener");
-    // console.log(event); // event object
-}
-//  btn.addEventListener("click",()=>{
+// let btn=document.querySelector("#btn")
+// const clickevent=()=>{
 //     console.log("Button clicked using event listener");
 //     // console.log(event); // event object
+// }
+// //  btn.addEventListener("click",()=>{
+// //     console.log("Button clicked using event listener");
+// //     // console.log(event); // event object
+// // })
+// btn.addEventListener("click",clickevent); // add event listener to the button
+
+// btn.addEventListener("dblclick",()=>{
+//     console.log("Button double clicked using event listener");
+//     console.log(event); // event object
 // })
-btn.addEventListener("click",clickevent); // add event listener to the button
 
-btn.addEventListener("dblclick",()=>{
-    console.log("Button double clicked using event listener");
-    console.log(event); // event object
+// btn.addEventListener("mouseover",()=>{
+//     console.log("Mouse over button using event listener");
+//     console.log(event); // event object
+// })
+
+// // Remove event listener
+// btn.removeEventListener("click",clickevent); // remove the event listener from the button
+
+
+let modeBtn=document.querySelector("#mode");
+let body=document.querySelector("body");
+let currentMode="light"
+modeBtn.addEventListener("click",()=>{
+    if(currentMode==="light"){
+        currentMode="dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }else{
+        currentMode="light";
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
+    console.log(currentMode);
+    // document.body.style.backgroundColor=currentMode==="light"?"white":"black"; // set the background color of the body element
+    modeBtn.innerText=currentMode==="light"?"Switch to Dark Mode":"Switch to Light Mode"; // set the inner text of the button
+    modeBtn.style.backgroundColor=currentMode==="light"?"red":"blue"; // set the background color of the button
+    modeBtn.style.color=currentMode==="light"?"white":"black"; // set the color of the button
+    document.querySelector("p").style.color=currentMode==="light"?"blue":"orange";
+
 })
-
-btn.addEventListener("mouseover",()=>{
-    console.log("Mouse over button using event listener");
-    console.log(event); // event object
-})
-
-// Remove event listener
-btn.removeEventListener("click",clickevent); // remove the event listener from the button

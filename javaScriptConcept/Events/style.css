@@ -5,3 +5,11 @@ div{
     color: white;
     border: 1px solid black;
 }
+.light{
+    background-color: white;
+    
+}
+.dark{
+    background-color: black;
+      
+}
