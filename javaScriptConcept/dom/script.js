@@ -104,3 +104,51 @@ let h1=document.querySelector("h1");
 // div.style.backgroundColor="blue"; //set the background color of the element
 // div.style.fontSize="50px";
 
+// DOM Manipulation
+// Insert and remove elements
+// Insert elements (done in two parts a) create a new element and b) append the new element to the parent element)
+
+// Methods to insert elements
+
+
+// let ele=document.createElement("h1"); //create an element
+//  node.append(el); //append the element to the parent element,add the element to the end of the parent element
+
+// let newButton=document.createElement("button"); //create a new button element
+// newButton.innerText="Click Me"; //set the inner text of the button
+// console.log(newButton); //log the button element to the console
+
+// let div=document.querySelector("div"); //get the div element
+// div.append(newButton); //append the button to the div element
+
+
+
+// Methods to remove elements in DOM
+// element.remove()  //remove the element from the parent element
+// div.remove(); //remove the div element from the parent element
+
+
+
+// let newHeading=document.createElement("h1"); //create a new heading element
+// newHeading.innerHTML="<i>Hello this is javaScript</i>"; //set the inner text of the heading
+// document.querySelector("body").prepend(newHeading); //append the heading to the body element
+
+// let para=document.querySelector("p"); //create a new paragraph element
+// para.remove(); //remove the paragraph element from the parent element
+
+
+
+// appendChild() method to append the new element to the parent element
+// let newHeading=document.createElement("h1"); //create a new heading element
+// newHeading.innerHTML="<i>Hello this is javaScript</i>"; //set the inner text of the heading
+// document.querySelector("body").appendChild(newHeading); //append the heading to the body element
+// newHeading.removeChild(newHeading); //remove the heading element from the parent element
+
+
+
+
+let newButton=document.createElement("button"); //create a new button element
+newButton.innerText="Click Me"; //set the inner text of the button
+newButton.style.backgroundColor="red"; //set the background color of the button
+newButton.style.color="white";
+document.querySelector("body").prepend(newButton)
