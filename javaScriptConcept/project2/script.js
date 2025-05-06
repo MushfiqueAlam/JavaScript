@@ -9,14 +9,17 @@ form.addEventListener("submit",(e)=>{
     let weight=parseInt(document.querySelector("#weight").value);
     const result=document.querySelector("#results");
     if(height==="" || height<0 || isNaN(height)){
-        result.innerHTML=`Please enter a valid height ${height}`
+        result.innerHTML=`Please enter a valid height ${height}!`
+        result.style.color="red";
     }
    else if(weight==="" || weight<0 || isNaN(weight)){
-        result.innerHTML=`Please enter a valid weight ${weight}`
+        result.innerHTML=`Please enter a valid weight ${weight}!`
+        result.style.color="red";
     }
     else{
         const bmi=(weight/(height*height));
-        result.innerHTML=`Your BMI is ${bmi.toFixed(2)}`; // Display the BMI result in the results element
+        result.innerHTML=`Your BMI is ${bmi.toFixed(2)}`; 
+        result.style.color="green";
     }
     // console.log(height); // Log the value to the console
 })
